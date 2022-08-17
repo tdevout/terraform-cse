@@ -21,7 +21,13 @@ variable "machine" {
   default     = "e2-medium"
 }
 
-variable "bucket" {
-    description = "Bucket Name"
-    default     = "c-s-exercise"
+variable "ports" {
+  description = "Firewall Ports"
+  type = list
+  default = [
+    "22",
+    "80",
+    "443",
+    "8443"
+  ]
 }
